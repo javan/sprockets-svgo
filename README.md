@@ -4,18 +4,18 @@
 
 ## Installing
 
-1. Install svgo
-    ```sh
-    # Globally
-    $ npm install -g svgo
-    # Or as a dependency
-    $ npm install -s svgo
-    ```
-2. Bundle
-    ```ruby
-    gem 'sprockets', '>= 3.0.0'
-    gem 'sprockets-svgo'
-    ```
+Install svgo
+```sh
+# Globally
+$ npm install -g svgo
+# Or as a dependency
+$ npm install -s svgo
+```
+Bundle
+```ruby
+gem 'sprockets', '>= 3.0.0'
+gem 'sprockets-svgo'
+```
 
 ## Using
 
