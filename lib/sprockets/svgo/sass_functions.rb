@@ -1,7 +1,8 @@
 module Sprockets
   module SassProcessor::Functions
     def svgo_data_uri(path, options = {})
-      url = sprockets_context.svgo_asset_data_uri(path.value, options.symbolize_keys)
+      options = options.transform_values(&:value).symbolize_keys
+      url = sprockets_context.svgo_asset_data_uri(path.value, options)
       Autoload::Sass::Script::String.new("url(" + url + ")")
     end
 

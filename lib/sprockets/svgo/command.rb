@@ -39,7 +39,10 @@ class Sprockets::SVGO::Command
 
   def execute
     command = [svgo_path]
-    command << "--input=#{options[:filename]}"
+
+    if options[:filename]
+      command << "--input=#{options[:filename]}"
+    end
 
     if options[:output]
       command << "--output #{options[:output]}"
@@ -67,6 +70,10 @@ class Sprockets::SVGO::Command
 
     if options[:precision]
       command << "--precision=#{options[:precision]}"
+    end
+
+    if options[:version]
+      command << "--version"
     end
 
     `#{command.join(" ")}`.chomp
