@@ -19,15 +19,15 @@ gem 'sprockets-svgo'
 
 ## Using
 
-In a .css, .scss, or .sass file:
-```css
-/* icons.css */
+With SASS
+```scss
+// icons.scss
 .bold {
   background-image: svgo-data-uri("images/bold.svg");
 }
 ```
-In an .erb file:
-```scss
+With ERB
+```css
 /* icons.css.erb */
 .bold {
   background-image: url(<%= svgo_asset_data_uri("images/bold.svg") %>);
